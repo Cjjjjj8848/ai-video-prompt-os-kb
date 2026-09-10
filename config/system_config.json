@@ -1,0 +1,15 @@
+{
+  "version": "4.0.0",
+  "project": "AI Video Prompt OS",
+  "defaults": {
+    "confirm_mode": "auto",
+    "github_mode": "preferred",
+    "language": "zh-CN",
+    "storyboard_ratio": "9:16"
+  },
+  "scoring_threshold": {
+    "direct_import": 4,
+    "pending": 3,
+    "drop": 3
+  }
+}

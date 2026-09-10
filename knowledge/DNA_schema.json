@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "description": "DNA 条目字段规范。新增 DNA 必须符合此 schema，否则 /学习 拒绝入库。",
+  "dna_entry": {
+    "id": "DNA-NNN，递增编号，不重复",
+    "name": "短名称（≤20字），可检索关键词",
+    "category": "camera|shot|movement|transition|action|lighting|audio|commercial|cinema|model_rules|learning",
+    "description": "规则描述，含适用条件与关键参数",
+    "source": "v4_seed | ugc | learning | user",
+    "score": "1-5 分，由 /学习 评分流程给出，≥4 可直接入库，<4 进 pending",
+    "tags": ["检索标签数组，用于 /生成 按任务检索"],
+    "usage": "适用场景说明"
+  },
+  "scoring_rules": {
+    "novelty": "新颖性：与现有 DNA 结构差异度 0-2 分",
+    "reusability": "复用性：能否跨产品/跨任务套用 0-2 分",
+    "clarity": "清晰度：指令可执行、无歧义 0-1 分",
+    "total": "总分 5 分制；≥4 直接入库，3 进 pending 待审，<3 丢弃"
+  },
+  "dedup_rules": {
+    "method": "按 (category + name 归一化 + description 语义) 比对",
+    "action": "完全重复→丢弃；高相似→保留高分合并描述；新结构→新建条目"
+  }
+}
