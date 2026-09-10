@@ -1,6 +1,6 @@
 ---
 name: ai-video-prompt-os
-description: AI 视频 Prompt 操作系统（V5 融合版）。当用户输入 /蒸馏、/学习、/生成、/优化、/同步 等斜杠命令，或需要蒸馏优秀视频提示词、沉淀DNA知识库、生成视频分镜提示词、拆解爆款视频结构、制作短视频/广告/电影分镜、优化已有Prompt时使用。核心能力：把优秀Prompt蒸馏成6维DNA（镜头/运镜/转场/动作链/时间结构/视觉规则），评分去重后入库，再按新任务检索DNA+套模板分阶段产出九宫格生图Prompt与Seedance视频Prompt。含 V5 融合升级：镜头语言速查表+多模态引用语法+12场景模板库+6条视频质量门控+5条分镜图门控+中英双文强制输出。支持GitHub知识库同步。
+description: AI 视频 Prompt 操作系统（V5 融合版）。当用户输入 /蒸馏、/学习、/生成、/优化、/同步 等斜杠命令，或需要蒸馏优秀视频提示词、沉淀DNA知识库、生成视频分镜提示词、拆解爆款视频结构、制作短视频/广告/电影分镜、优化已有Prompt、生成人物四视图/角色设定表（character turnaround / model sheet）时使用。核心能力：把优秀Prompt蒸馏成6维DNA（镜头/运镜/转场/动作链/时间结构/视觉规则），评分去重后入库，再按新任务检索DNA+套模板分阶段产出九宫格生图Prompt与Seedance视频Prompt。含 V5 融合升级：镜头语言速查表+多模态引用语法+12场景模板库+6条视频质量门控+5条分镜图门控+中英双文强制输出+人物四视图双场景模板。支持GitHub知识库同步。
 ---
 
 # AI Video Prompt OS V5
@@ -85,6 +85,7 @@ knowledge/
 | 风景旅拍 | scene_templates 模板9 |
 | 长镜头追踪 | scene_templates 模板10 |
 | 战争/宏大场景 | scene_templates 模板11 |
+| 人物四视图/角色设定表（character turnaround / model sheet） | character_turnaround 模板 + DNA-050/051/052（有人物参考图用 --cref 锁脸；无参考图用文字锁特征） |
 | 不确定 | AI 自动判断 |
 | 用户指定模板（如 `/生成 千川`） | 强制使用指定模板 |
 
@@ -119,6 +120,16 @@ knowledge/
    - 门控4 多模态引用合规（编号连续+用途标注+主体参考）
    - 门控5 商业禁忌过滤（无文字水印/畸变/形变/跨格渗色/真实品牌名+高势能动态）
 10. 输出九宫格生图 Prompt + 门控自检表。用途：Gemini / Nano Banana → 生成 3×3 九宫格分镜图。
+
+### 阶段 2.5：人物四视图分支（角色设定任务专用）
+
+> 🔴 当任务类型为「人物四视图 / 角色设定表 / character turnaround / model sheet」时，不走九宫格分镜流程，改走本分支。详见 `templates/nanobanana/character_turnaround.md` + `knowledge/model_rules/character_turnaround_spec.md`。
+
+- **有参考图**：场景 A → `--cref [参考图URL] --cw 100` 强锁脸，严格不改参考图任何画面，只换视角
+- **无参考图**：场景 B → 文字死写全部识别特征（年龄/肤色/发型/五官/痣/配饰/服装/鞋/比例），强调 "All four panels must show the SAME person"
+- 布局：单张 16:9，四等宽竖栏 = 脸部胸像特写 / 全身正面 / 全身侧面 / 全身背面（1栏脸部:3栏全身）
+- 输出中英双文版 + 过四视图专用 4 条门控（character_turnaround_spec.md 第6节），附自检表
+- 四视图图生成后可作为后续九宫格/视频的 `@图片` 人物参考
 
 ### 阶段 3：Seedance 视频 Prompt（九宫格图生成后）
 
