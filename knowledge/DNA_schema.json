@@ -4,12 +4,15 @@
   "dna_entry": {
     "id": "DNA-NNN，递增编号，不重复",
     "name": "短名称（≤20字），可检索关键词",
-    "category": "camera|shot|movement|transition|action|lighting|audio|commercial|cinema|model_rules|learning",
+    "category": "camera|shot|movement|transition|action|lighting|audio|commercial|dialogue|cinema|model_rules|learning",
     "description": "规则描述，含适用条件与关键参数",
     "source": "v4_seed | ugc | learning | user",
     "score": "1-5 分，由 /学习 评分流程给出，≥4 可直接入库，<4 进 pending",
-    "tags": ["检索标签数组，用于 /生成 按任务检索"],
-    "usage": "适用场景说明"
+    "tags": [
+      "检索标签数组，用于 /生成 按任务检索"
+    ],
+    "usage": "适用场景说明",
+    "app": "video|image|both，应用端标记：/生成 阶段0 检索先按此过滤，生图任务只看 image/both，视频任务只看 video/both"
   },
   "scoring_rules": {
     "novelty": "新颖性：与现有 DNA 结构差异度 0-2 分",
