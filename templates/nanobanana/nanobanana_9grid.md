@@ -1,6 +1,6 @@
 # NanoBanana 九宫格生图模板（templates/nanobanana）
 
-> V5 融合版：双模式（多机位底图/分镜故事板）+ 八要素 + 全局硬锁定 + 格间防渗透 + 下游映射标签。详细规范见 `knowledge/model_rules/storyboard_prompt_spec.md`。
+> V5.4：双模式（多机位底图/分镜故事板）+ 八要素 + 全局硬锁定 + 格间防渗透 + 下游映射标签。详细规范见 `knowledge/model_rules/storyboard_prompt_spec.md`。
 
 ---
 
