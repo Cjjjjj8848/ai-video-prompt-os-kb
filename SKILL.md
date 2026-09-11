@@ -1,9 +1,9 @@
 ---
 name: ai-video-prompt-os
-description: AI 视频 Prompt 操作系统（V5 融合版）。当用户输入 /蒸馏、/学习、/生成、/优化、/同步 等斜杠命令，或需要蒸馏优秀视频提示词、沉淀DNA知识库、生成视频分镜提示词、拆解爆款视频结构、制作短视频/广告/电影分镜、优化已有Prompt、生成人物四视图/角色设定表（character turnaround / model sheet）时使用。核心能力：把优秀Prompt蒸馏成6维DNA（镜头/运镜/转场/动作链/时间结构/视觉规则），评分去重后入库，再按新任务检索DNA+套模板分阶段产出九宫格生图Prompt与Seedance视频Prompt。含 V5 融合升级：镜头语言速查表+多模态引用语法+12场景模板库+6条视频质量门控+5条分镜图门控+中英双文强制输出+人物四视图双场景模板。支持GitHub知识库同步。
+description: AI 视频 Prompt 操作系统（V5.4.0 八维版）。当用户输入 /蒸馏、/学习、/生成、/优化、/同步 等斜杠命令，或需要蒸馏优秀视频提示词、沉淀DNA知识库、生成视频分镜提示词、拆解爆款视频结构、制作短视频/广告/电影分镜、优化已有Prompt、生成人物四视图/角色设定表（character turnaround / model sheet）、人像生图时使用。核心能力：把优秀Prompt蒸馏成八维DNA（镜头/运镜/转场/动作链/时间结构/视觉规则+声音+台词），每条带 app 应用端标记（video/image/both），评分去重后入库，再按"先应用端过滤、后维度检索"的规则检索DNA+套模板分阶段产出九宫格生图Prompt与Seedance视频Prompt。含 V5 融合升级：镜头语言速查表+多模态引用语法+12场景模板库+6条视频质量门控+5条分镜图门控+中英双文强制输出+人物四视图双场景模板；V5.4 升级：八维蒸馏+app应用端标记+dialogue台词分类。支持GitHub知识库同步。
 ---
 
-# AI Video Prompt OS V5
+# AI Video Prompt OS V5.4
 
 一套「Prompt DNA 蒸馏 + 可进化知识库 + 生成引擎」的视频提示词系统。
 
@@ -13,9 +13,9 @@ description: AI 视频 Prompt 操作系统（V5 融合版）。当用户输入 /
 
 | 命令 | 作用 | 数据流 |
 |---|---|---|
-| `/蒸馏` | 分析一个优秀视频 Prompt，提取镜头/运镜/转场/动作/时间结构/视觉规则 DNA | Prompt → DNA 草案 |
+| `/蒸馏` | 分析优秀视频/生图 Prompt，提取**八维 DNA**（镜头/运镜/转场/动作/时间/视觉+🔴声音+🔴台词），每条标注 app 应用端（video/image/both） | Prompt → DNA 草案 |
 | `/学习` | 蒸馏 → 评分 → 去重 → 合并 → 写回知识库（本地或 GitHub） | DNA → knowledge/ |
-| `/生成` | 读取已有 DNA → 按新任务检索 → 分阶段产出分镜→生图→视频 Prompt | knowledge/ → 新 Prompt |
+| `/生成` | **先按 app 应用端过滤** → 再检索相关 DNA → 套模板分阶段产出分镜→生图→视频 Prompt | knowledge/ → 新 Prompt |
 | `/优化` | 检查已有 Prompt → 对照 DNA 修正镜头/动作/转场/时间轴/模型限制 | 旧 Prompt → 新 Prompt |
 | `/同步` | 拉取最新知识库（GitHub 或本地），建立当前会话索引 | 仓库 → 会话 |
 
