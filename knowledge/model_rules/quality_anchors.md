@@ -169,3 +169,69 @@ real skin texture with natural pores and subsurface translucency, clean flawless
 - ✅ 正面写"clean flawless"（干净无瑕）
 - ❌ 不写"imperfections/blemishes/redness/dark circles"（这些会触发视频模型画出血线/伤痕）
 - 负面词加 `no blemishes, no scratches, no blood, no nosebleed`
+
+---
+
+## §6 手机直拍光学协议（Mobile Candid Mode · 杀CG感路线）
+
+> 与 §A.6 电影机路线（Arri Alexa/胶片）并列。根据片子风格选一条，不要混用。
+
+### 什么时候用手机直拍路线
+
+| 用电影机路线 | 用手机直拍路线 |
+|---|---|
+| TVC/品牌大片/美妆广告/产品高级感 | UGC风格/剧情流广告/圣诞投影灯/生活化种草 |
+| 产品本身需要"高级感" | 产品需要"真实感/代入感/朋友推荐感" |
+| 如：口红运动饮料黑金产品 | 如：充电宝圣诞礼物家居好物 |
+
+### 光学母版（全局注入）
+
+```
+Shot on iPhone 11 primary camera (26mm f/1.8), raw unedited candid mobile photo aesthetic, natural native ISO sensor noise and organic grain, authentic dynamic range, mild optical lens distortion, zero 8k hyper-sharpening, zero 3D CGI gloss, zero beauty airbrushing.
+```
+
+**作用**：用手机原生光学特性彻底杀死 3D 游戏 CG 渲染感和过度锐化。原生噪点+轻微镜头畸变+raw 直出=真实感。
+
+### 三大光影预设库（按需嵌入）
+
+#### 预设 1：平淡阴天光（杀3D/去油光最强）
+```
+Flat, completely non-directional overcast natural daylight, zero specular highlights, zero shiny reflections, light fully absorbed by matte surfaces.
+```
+- **用途**：产品本身偏哑光/生活场景，需要去油光去塑料感
+- **效果**：完全无方向柔光，表面不反光，最"素人"最真实
+
+#### 预设 2：单侧硬窗光（显毛孔微阴影）
+```
+Hard directional natural side-lighting (un-diffused window light effect), high-contrast half-lit and half-shadow, revealing micro-shadows inside pores and wrinkles.
+```
+- **用途**：人像为主、需要真实肤质质感
+- **效果**：半明半暗，毛孔微阴影可见，但商业片仍写 clean flawless（不写瑕疵）
+
+#### 预设 3：夜间暖环境光（室内/节日）
+```
+Warm low-light ambient environment (2700K-3200K tungsten glow), soft optical lens flares around point lights, realistic deep shadows with natural ISO luminance noise.
+```
+- **用途**：夜间室内/节日/圣诞/烛光/温馨场景
+- **效果**：暖钨丝灯+自然暗部噪点+光点柔光晕，最有生活温度
+
+### 手机路线与质感锚点的组装
+
+手机直拍路线下：
+- A.6 媒介锚点从 `Arri Alexa Mini` 改为 `Shot on iPhone 11 primary camera`
+- A.1 清晰度锚点从"光学锐度"改为"natural native ISO sensor noise, organic grain"
+- A.3 影调密度锚点保留（真实动态范围）
+- A.4 皮肤锚点保留 clean flawless
+- 五层色彩：film_stock 改为 `raw digital (no film emulation)`，grain 改为 `natural native ISO noise`
+- 三大光影预设选一个嵌入【光影设计】段
+
+### 组装模板（手机直拍路线）
+
+```
+【画质要求】
+Shot on iPhone 11 primary camera (26mm f/1.8), raw unedited candid mobile photo aesthetic,
+{选一个光影预设：平淡阴天光 / 单侧硬窗光 / 夜间暖环境光}，
+natural native ISO sensor noise and organic grain, authentic dynamic range,
+mild optical lens distortion, zero 8k hyper-sharpening, zero 3D CGI gloss, zero beauty airbrushing,
+1/50s–1/100s 自然物理运动模糊。
+```
