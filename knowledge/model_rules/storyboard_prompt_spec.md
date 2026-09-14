@@ -1,6 +1,6 @@
 # 分镜图提示词升级规范（model_rules / storyboard_prompt_spec）
 
-> 八要素分镜图提示词规范：全局硬锁定+八要素+高势能瞬间+下游映射标签+5条专用门控。V6 起逐镜头单张为默认（见 storyboard_engine.md §7），本规范仍适用；格间防渗透仅在用户要拼 3×3 九宫格预览时启用。适用于 NanoBanana / Gemini。
+> 八要素分镜图提示词规范：全局硬锁定+八要素+高势能瞬间+下游映射标签+5条专用门控。逐镜头单张为默认（见 archive_v6/storyboard_engine.md §7），本规范仍适用；格间防渗透仅在用户要拼 3×3 九宫格预览时启用。适用于 NanoBanana / Gemini。
 
 ---
 
