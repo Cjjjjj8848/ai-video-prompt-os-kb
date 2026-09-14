@@ -1,15 +1,22 @@
 {
-  "version": "4.0.0",
-  "project": "AI Video Prompt OS",
-  "defaults": {
-    "confirm_mode": "auto",
-    "github_mode": "preferred",
+  "version": "7.0.0",
+  "project": "AI Commercial Video Prompt OS",
+  "engine_defaults": {
     "language": "zh-CN",
-    "storyboard_ratio": "9:16"
+    "supported_aspect_ratios": ["9:16", "16:9", "1:1", "2.35:1"],
+    "default_ratio": "9:16",
+    "primary_target_models": ["Seedance 2.0", "Seedance 2.5", "LibTV", "Runway Gen-3", "Kling"]
   },
   "scoring_threshold": {
     "direct_import": 4,
     "pending": 3,
     "drop": 3
+  },
+  "modules_enabled": {
+    "dual_axis_routing": true,
+    "creative_proposals": true,
+    "micro_proof_lock": true,
+    "shot_tagging": true,
+    "product_physics": true
   }
 }
