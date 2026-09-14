@@ -53,3 +53,33 @@ Warm low-light ambient environment (2700K-3200K tungsten glow), soft optical len
 ```
 Shot on iPhone primary camera (26mm f/1.8), raw unedited candid mobile photo aesthetic, natural native ISO sensor noise and organic grain, authentic dynamic range, mild optical lens distortion, zero 8k hyper-sharpening, zero 3D CGI gloss, zero beauty airbrushing.
 ```
+
+---
+
+## 光源选择决策表（商业母题×光学场景联动）
+
+| 母题 | 开场光 | 转折光 | 终点光 | 原因 |
+|---|---|---|---|---|
+| M1 痛点消解 | 光源B硬窗光（凸显狼狈） | 光源B硬窗光 | 光源A阴天光（干净秩序） | 痛点需要硬光放大惨状，解决后回归柔和 |
+| M2 感官ASMR | 光源A阴天光（去油光显材质） | 光源A阴天光 | 光源A阴天光 | 材质展示不需要戏剧性光影，要纯净 |
+| M3 状态跃迁 | 光源A阴天光（脸色暗淡死白） | 光源B/C高光漫射（觉醒） | 光源C暖光（从容掌控） | 哑光死白→高光折射，反差最大 |
+| M4 空间重构 | 光源C暗调现实 | 光源C爆发光 | 光源C暖光（家庭温馨） | 暗→亮裂变，全程暖调 |
+
+---
+
+## 模型光学字典映射（Compiler Dict）
+
+| 目标模型 | 禁用词 | 替换词 |
+|---|---|---|
+| Seedance/Runway | 8k, masterpiece, hyper-detailed, octane render | Shot on iPhone, natural ISO noise, organic grain, zero CGI gloss |
+| libTV/Kling | 8k hyper-sharpening | Shot on iPhone 11 (26mm f/1.8), raw unedited candid, authentic dynamic range |
+
+---
+
+## 三层堆叠法（美妆品类叠加规则）
+
+美妆/护肤品类阶段3输出时，三层必须叠加，不可二选一：
+
+1. **底层（DNA-084传感器）**：iPhone真实噪点+镜头轻微色散+光学母版代码
+2. **中层（光源库）**：单侧硬窗光（凸显毛孔微阴影与面部真实结构）
+3. **表层（product_physics/beauty_skincare.md）**：次表面散射SSS+膏体切面湿润微反光+水光折射带
