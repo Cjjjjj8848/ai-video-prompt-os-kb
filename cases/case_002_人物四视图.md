@@ -49,4 +49,4 @@ model sheet, 4-view character turnaround, split into four vertical panels: 1st p
 ## 复用建议
 - 影视/游戏角色设定、服装 lookbook、IP 形象建模参考
 - 电商模特一致性（跨图保持同一模特脸）
-- 后续生图/生视频前的外观锁定前置环节（四视图图 → 九宫格 → Seedance 视频）
+- 后续生图/生视频前的外观锁定前置环节（定妆照 → 四视图 → 九宫格 → Seedance 视频，视频只引用四视图）

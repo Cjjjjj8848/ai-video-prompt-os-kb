@@ -1,5 +1,10 @@
 # 人物四视图模板（templates/nanobanana/character_turnaround）
 
+> **人物资产生成链（定妆照 → 四视图）**：
+> 1. 先出**定妆照**（一张满意的脸部/半身，把长相定下来）——中间产物；
+> 2. 再以定妆照为参考，出**四视图**（脸部特写/全身正面/侧面/背面）——最终人物资产；
+> 3. 后续视频提示词中，人物**只 @四视图**，不再 @定妆照；多个人物各走一条链、各 @各的四视图。
+
 > 角色一致性参考表（character turnaround / model sheet）：一次输出同一人物的四视角（脸部特写/全身正面/全身侧面/全身背面），用于角色设定、服装 lookbook、IP 建模参考、电商模特一致性，以及后续生图/生视频前锁定外观。
 > 核心 DNA：DNA-050（四竖栏分屏构图）/ DNA-051（--cref/--cw 锁脸）/ DNA-052（亮白影棚 lookbook 视觉）。
 > 详细规范见 `knowledge/model_rules/character_turnaround_spec.md`。
