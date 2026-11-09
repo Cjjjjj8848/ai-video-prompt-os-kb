@@ -62,9 +62,9 @@
 9. TAG不进Prompt
 10. 首尾闭环
 11. 5个TAG全覆盖
-12. 生成段无 BGM、无配乐，保留同步人声和动作音效
+12. 生成段无 BGM、无配乐。动作音效按需求同步生成或后期对齐，跨段可绑定同一音色样音
 13. 11模块齐全
 14. 物理因果4要素
 15. 负面约束分类
 16. 人物表演细节
-17. 逐段核对画面元素、入出点、构图和后期叠加，见[商业视频编译与验收](knowledge/model_rules/production_delivery.md)
+17. 默认交付 Markdown（.md）。交付前逐镜核对需求与指定参考视频，后期叠加单列，见[商业视频编译与验收](knowledge/model_rules/production_delivery.md)
